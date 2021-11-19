@@ -17,7 +17,6 @@
 
 window.findNRooksSolution = function(n, currentBoard) {
   currentBoard = currentBoard || new Board({'n': n});
-  console.log(currentBoard);
 
   // base case:
   let currentRow = 0;
@@ -39,8 +38,8 @@ window.findNRooksSolution = function(n, currentBoard) {
       addRook();
     }
   };
-  addRook;
-  let solution = currentBoard;
+  addRook();
+  let solution = currentBoard.rows();
   console.log('solution', solution);
   console.log('Single solution for ' + n + ' rooks:', JSON.stringify(solution));
   return solution;
